@@ -24,6 +24,13 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
   var offset = 0.0.obs;
   var brush = 0.0.obs;
 
+  var smoothness = 0.0.obs;
+  var offset2 = 0.0.obs;
+  var brush2 = 0.0.obs;
+
+  var offset3 = 0.0.obs;
+  var brush3 = 0.0.obs;
+
   Color color = const Color(0xFFAEDEEC);
   Color color2 = const Color(0xFFE4F8FE);
 
@@ -107,9 +114,9 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                     inactiveColor: Colors.grey,
                                     min: 0,
                                     max: 100,
-                                    value: threshold.value,
+                                    value: offset.value,
                                     onChanged: (value) {
-                                      threshold.value = value;
+                                      offset.value = value;
                                     },
                                   ),
                                 ),
@@ -123,9 +130,9 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                     inactiveColor: Colors.grey,
                                     min: 0,
                                     max: 100,
-                                    value: threshold.value,
+                                    value: brush.value,
                                     onChanged: (value) {
-                                      threshold.value = value;
+                                      brush.value = value;
                                     },
                                   ),
                                 ),
@@ -149,9 +156,9 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                         inactiveColor: Colors.grey,
                                         min: 0,
                                         max: 100,
-                                        value: threshold.value,
+                                        value: smoothness.value,
                                         onChanged: (value) {
-                                          threshold.value = value;
+                                          smoothness.value = value;
                                         },
                                       ),
                                     )
@@ -169,9 +176,9 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                         inactiveColor: Colors.grey,
                                         min: 0,
                                         max: 100,
-                                        value: threshold.value,
+                                        value: offset2.value,
                                         onChanged: (value) {
-                                          threshold.value = value;
+                                          offset2.value = value;
                                         },
                                       ),
                                     ),
@@ -185,9 +192,9 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                         inactiveColor: Colors.grey,
                                         min: 0,
                                         max: 100,
-                                        value: threshold.value,
+                                        value: brush2.value,
                                         onChanged: (value) {
-                                          threshold.value = value;
+                                          brush2.value = value;
                                         },
                                       ),
                                     ),
@@ -211,9 +218,9 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                             inactiveColor: Colors.grey,
                                             min: 0,
                                             max: 100,
-                                            value: threshold.value,
+                                            value: offset3.value,
                                             onChanged: (value) {
-                                              threshold.value = value;
+                                              offset3.value = value;
                                             },
                                           ),
                                         ),
@@ -227,9 +234,9 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                             inactiveColor: Colors.grey,
                                             min: 0,
                                             max: 100,
-                                            value: threshold.value,
+                                            value: brush3.value,
                                             onChanged: (value) {
-                                              threshold.value = value;
+                                              brush3.value = value;
                                             },
                                           ),
                                         ),
