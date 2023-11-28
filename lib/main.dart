@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:photo_id_maker/Image/repair.dart';
+import 'package:photo_id_maker/Image/smoothness.dart';
 
+import 'Image/Brush.dart';
 import 'HomePage.dart';
-import 'background remove.dart';
-import 'image border.dart';
+import 'Image/Image save.dart';
+import 'Image/background remove.dart';
+import 'Image/image border.dart';
 
 // void main() {
 //   WidgetsFlutterBinding.ensureInitialized();
 //   MobileAds.instance.initialize();
 //   runApp(const MyApp());
 // }
+
+String imageSource = "https://blmparis.files.wordpress.com/2014/07/day.jpg";
+
 
 void main() {
   runApp(const MyApp());
@@ -79,30 +85,51 @@ class Data extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Get.to(() => const HomePage());
-                // Navigator.of(context).push(MaterialPageRoute(
-                //   builder: (context) => const HomePage(),
-                // ));
               },
               child: const Text("Image Crop"),
             ),
             ElevatedButton(
               onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //   builder: (context) => const ImageBorder(),
-                // ));
                 Get.to(() => const ImageBorder());
               },
               child: const Text("Add Border"),
             ),
             ElevatedButton(
               onPressed: () {
-                // Navigator.of(context).push(MaterialPageRoute(
-                //   builder: (context) => const ImageBorder(),
-                // ));
                 Get.to(() => const BackgroundRemove());
               },
               child: const Text("Remove Background"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() =>   const SmoothnessScreen());
+              },
+              child: const Text("Smoothness"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() =>   const BrushScreen());
+              },
+              child: const Text("Brush"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() =>   const ImageRepair());
+              },
+              child: const Text("Repair"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(() =>    ImageSave());
+              },
+              child: const Text("Image Save"),
+            ),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Get.to(() =>    ImageSave());
+            //   },
+            //   child: const Text("Offset"),
+            // ),
           ],
         ),
       ),

@@ -1,5 +1,7 @@
+import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:photo_view/photo_view.dart';
 import 'package:simple_fx/simple_fx.dart';
 
 class BackgroundRemove extends StatefulWidget {
@@ -52,7 +54,7 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                 height: 400,
                 width: 300,
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  // color: Colors.red,
                   image: DecorationImage(
                     image: NetworkImage(imageSource),
                     fit: BoxFit.cover,
@@ -62,6 +64,19 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                     width: 2,
                   ),
                 ),
+                child: PhotoView(
+                  imageProvider: NetworkImage(
+                    imageSource,
+                  ),
+                ),
+                // child: Image.network(
+                //   imageSource,
+                //   fit: BoxFit.cover,
+                // ).blurred(
+                //   blur: brush.value,
+                //   colorOpacity: offset.value,
+                //
+                // ),
               ),
               const SizedBox(height: 40),
               Container(
@@ -113,10 +128,12 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
                                     activeColor: color,
                                     inactiveColor: Colors.grey,
                                     min: 0,
-                                    max: 100,
+                                    max: 1,
                                     value: offset.value,
                                     onChanged: (value) {
-                                      offset.value = value;
+                                      var aa;
+                                      aa = value / 10;
+                                      offset.value = aa;
                                     },
                                   ),
                                 ),

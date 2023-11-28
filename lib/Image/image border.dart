@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:simple_fx/simple_fx.dart';
 
+import '../main.dart';
+
+
 class ImageBorder extends StatefulWidget {
   const ImageBorder({super.key});
 
@@ -25,7 +28,6 @@ class _ImageBorderState extends State<ImageBorder> {
 
   Color color = const Color(0xFFAEDEEC);
 
-  String imageSource = "https://blmparis.files.wordpress.com/2014/07/day.jpg";
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +57,11 @@ class _ImageBorderState extends State<ImageBorder> {
                     width: 2,
                   )),
                   child: SimpleFX(
+
                     imageSource: Image.network(
                       imageSource,
                       fit: BoxFit.cover,
+
                     ),
                     brightness: brightnessValue.value,
                     saturation: saturationValue.value,
