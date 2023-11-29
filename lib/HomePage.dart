@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
+String imageSource = "https://blmparis.files.wordpress.com/2014/07/day.jpg";
+
+
 
 
 class HomePage extends StatefulWidget {

@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, depend_on_referenced_packages
+// ignore_for_file: avoid_print, depend_on_referenced_packages, must_be_immutable
 
 import 'dart:io';
 import 'dart:typed_data';
@@ -7,7 +7,6 @@ import 'package:flutter_file_dialog/flutter_file_dialog.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:image/image.dart' as img;
 import 'package:http/http.dart' as http;
-import 'package:photo_id_maker/main.dart';
 
 Future<void> saveImageWithDifferentSizes(String imagePath) async {
   // Load the original image

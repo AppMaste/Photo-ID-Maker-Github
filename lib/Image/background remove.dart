@@ -1,8 +1,6 @@
-import 'package:blur/blur.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:photo_view/photo_view.dart';
-import 'package:simple_fx/simple_fx.dart';
 
 class BackgroundRemove extends StatefulWidget {
   const BackgroundRemove({super.key});
@@ -29,6 +27,7 @@ class _BackgroundRemoveState extends State<BackgroundRemove> {
   var smoothness = 0.0.obs;
   var offset2 = 0.0.obs;
   var brush2 = 0.0.obs;
+
 
   var offset3 = 0.0.obs;
   var brush3 = 0.0.obs;

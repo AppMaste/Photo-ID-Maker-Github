@@ -2,9 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:photo_id_maker/HomePage.dart';
 import 'package:simple_fx/simple_fx.dart';
-
-import '../main.dart';
 
 
 class ImageBorder extends StatefulWidget {

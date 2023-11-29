@@ -2,8 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-
-import 'package:photo_id_maker/main.dart';
+import 'package:photo_id_maker/HomePage.dart';
 
 class SmoothnessScreen extends StatefulWidget {
   const SmoothnessScreen({super.key});

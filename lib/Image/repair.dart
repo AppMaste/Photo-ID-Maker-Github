@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:photo_id_maker/main.dart';
+import 'package:photo_id_maker/HomePage.dart';
 
 class ImageRepair extends StatefulWidget {
   const ImageRepair({super.key});
